@@ -12,6 +12,8 @@
     1. [Mélange et Réinitialisation](#mélange-et-réinitialisation)
     2. [Suivi des Tentatives et Correspondances](#suivi-des-tentatives-et-correspondances)
     3. [Message de Victoire](#message-de-victoire)
+    4. [Intégration des Effets Sonores](#intégration-des-effets-sonores)
+    5. [Base de Données Locale](#base-de-données-locale)
 5. [Test et Validation](#test-et-validation)
 6. [Temps Passé sur Chaque Partie](#temps-passé-sur-chaque-partie)
 7. [Problèmes Rencontrés](#problèmes-rencontrés)
@@ -70,7 +72,7 @@ Le jeu commence avec les cartes mélangées et placées face cachée. Le joueur 
 
 ### 3. Message de Victoire
 Une fois toutes les cartes appariées, un message de victoire est affiché dans une boîte de dialogue. Cette boîte permet également de réinitialiser le jeu en appuyant sur le bouton "OK".
-### Intégration des Effets Sonores
+### 4. Intégration des Effets Sonores
 **Fonctionnalités :**
 - **Effets sonores lors des interactions clés** :
   - **Flip des cartes** : Un son est joué lorsque l'utilisateur retourne une carte.
@@ -85,7 +87,7 @@ Deux sons sont utilisés pour rendre le jeu plus immersif :
 - win_sound.mp3 : Joué lors de la victoire.
 Ces sons sont intégrés via la classe SoundPool pour une lecture rapide et efficace.
 
-### Base de Données Locale
+### 5. Base de Données Locale
 Le stockage des victoires est géré avec SQLite via la classe DatabaseHelper :
 - Base de données : game.db
 - Table des victoires : Contient les colonnes id (clé primaire), date (date et heure), et flips (nombre de tentatives).
