@@ -125,7 +125,7 @@ Le bouton "Shuffle" mélange les cartes qui sont face cachée (les cartes appari
 
 <img src="https://github.com/user-attachments/assets/5e349259-a1eb-4155-98be-3b69b1a31ad5" alt="image" width="200"/>
 
-Cette interface affiche une liste des victoires précédentes du joueur, avec des informations sur la date et le nombre de tentatives pour chaque victoire.
+L'interface ci-dessous affiche une liste des victoires précédentes du joueur, avec des informations sur la date et le nombre de tentatives pour chaque victoire.
 
 <img src="https://github.com/user-attachments/assets/9580dd02-964f-4df7-9230-156466cf5312" alt="image" width="200"/>
 
