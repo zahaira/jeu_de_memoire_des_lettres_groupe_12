@@ -117,20 +117,29 @@ Le bouton "Shuffle" mélange les cartes qui sont face cachée (les cartes appari
 <img src="https://github.com/user-attachments/assets/b669bd12-c33b-4a26-b6ef-78b861390a88" alt="image" width="200"/>
 <img src="https://github.com/user-attachments/assets/521e2210-dfe1-4299-bfb0-fc041c9b9e67" alt="image" width="200"/>
 
-•	Un dialogue apparaît lorsqu'il gagne.
-•	Lorsqu'il clique sur "OK", toutes les cartes sont mélangées et retournées face cachée.
-•	Les compteurs de flips et de paires sont réinitialisés, et une nouvelle partie commence.
+•	- Un dialogue s'affiche lorsqu'un joueur gagne la partie.
+- En cliquant sur **"OK"** :
+  - Toutes les cartes sont mélangées et retournées face cachée.
+  - Les compteurs de flips et de paires sont réinitialisés.
+  - Une nouvelle partie commence automatiquement.
 
 <img src="https://github.com/user-attachments/assets/5e349259-a1eb-4155-98be-3b69b1a31ad5" alt="image" width="200"/>
 
 <img src="https://github.com/user-attachments/assets/9580dd02-964f-4df7-9230-156466cf5312" alt="image" width="200"/>
 
 Cette interface affiche une liste des victoires précédentes du joueur, avec des informations sur la date et le nombre de tentatives pour chaque victoire.
-Disposition :
-•	En haut de l'écran :
-o	Un titre "Victory History" centré.
-•	Section principale :
-o	Une liste déroulante (ListView) affichant les victoires au format :
-•	En bas :
-o	Un bouton "Play" permettant de commencer une nouvelle partie.
+### Disposition
+
+### En haut de l'écran :
+- **Titre** :  
+  - Un titre centré nommé **"Victory History"**.
+
+### Section principale :
+- **Liste déroulante** :  
+  - Une **ListView** affichant les victoires au format spécifié.
+
+### En bas :
+- **Bouton** :  
+  - Un bouton nommé **"Play"** permettant de commencer une nouvelle partie.
+
 
