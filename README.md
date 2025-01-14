@@ -70,7 +70,28 @@ Le jeu commence avec les cartes mélangées et placées face cachée. Le joueur 
 
 ### 3. Message de Victoire
 Une fois toutes les cartes appariées, un message de victoire est affiché dans une boîte de dialogue. Cette boîte permet également de réinitialiser le jeu en appuyant sur le bouton "OK".
+### Intégration des Effets Sonores
+**Fonctionnalités :**
+- **Effets sonores lors des interactions clés** :
+  - **Flip des cartes** : Un son est joué lorsque l'utilisateur retourne une carte.
+  - **Correspondance réussie** : Un son distinct est joué pour signaler une correspondance.
+  - **Victoire** : Un son est joué lorsque le joueur gagne la partie.
 
+**Implémentation :**
+Gestion des Effets Sonores
+Deux sons sont utilisés pour rendre le jeu plus immersif :
+
+- match_sound.mp3 : Joué lorsqu'une paire est trouvée.
+- win_sound.mp3 : Joué lors de la victoire.
+Ces sons sont intégrés via la classe SoundPool pour une lecture rapide et efficace.
+
+### Base de Données Locale
+Le stockage des victoires est géré avec SQLite via la classe DatabaseHelper :
+- Base de données : game.db
+- Table des victoires : Contient les colonnes id (clé primaire), date (date et heure), et flips (nombre de tentatives).
+**Fonctionnalités :**
+- Insérer une victoire : insertVictory(String date, int flips)
+- Récupérer toutes les victoires : getAllVictories()
 ## Test et Validation
 Le jeu a été testé de manière approfondie pour s'assurer que :
 - Les cartes se mélangent correctement à chaque nouvelle partie.
@@ -94,31 +115,6 @@ Le jeu a été testé de manière approfondie pour s'assurer que :
 - **Organisation Claire des Packages** : Le projet est organisé en packages logiques.
 - **Gestion des Erreurs** : Utilisation de `try-catch` pour gérer les exceptions.
 - **Code Propre et Lisible** : Code indenté correctement, fonctions courtes et concises.
-# Intégration des Effets Sonores et Base de Données Locale
-
-## Effets Sonores
-
-### Fonctionnalités :
-- **Effets sonores lors des interactions clés** :
-  - **Flip des cartes** : Un son est joué lorsque l'utilisateur retourne une carte.
-  - **Correspondance réussie** : Un son distinct est joué pour signaler une correspondance.
-  - **Victoire** : Un son est joué lorsque le joueur gagne la partie.
-
-### Implémentation :
-Gestion des Effets Sonores
-Deux sons sont utilisés pour rendre le jeu plus immersif :
-
-- match_sound.mp3 : Joué lorsqu'une paire est trouvée.
-- win_sound.mp3 : Joué lors de la victoire.
-Ces sons sont intégrés via la classe SoundPool pour une lecture rapide et efficace.
-
-## Base de Données Locale
-Le stockage des victoires est géré avec SQLite via la classe DatabaseHelper :
-- Base de données : game.db
-- Table des victoires : Contient les colonnes id (clé primaire), date (date et heure), et flips (nombre de tentatives).
-**Fonctionnalités :**
-- Insérer une victoire : insertVictory(String date, int flips)
-- Récupérer toutes les victoires : getAllVictories()
 
 ## Présentation Finale
 L'interface principale est l'écran d'accueil de l'application. Elle offre deux options principales :
