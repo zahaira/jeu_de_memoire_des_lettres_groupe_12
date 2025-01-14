@@ -94,6 +94,31 @@ Le jeu a été testé de manière approfondie pour s'assurer que :
 - **Organisation Claire des Packages** : Le projet est organisé en packages logiques.
 - **Gestion des Erreurs** : Utilisation de `try-catch` pour gérer les exceptions.
 - **Code Propre et Lisible** : Code indenté correctement, fonctions courtes et concises.
+# Intégration des Effets Sonores et Base de Données Locale
+
+## Effets Sonores
+
+### Fonctionnalités :
+- **Effets sonores lors des interactions clés** :
+  - **Flip des cartes** : Un son est joué lorsque l'utilisateur retourne une carte.
+  - **Correspondance réussie** : Un son distinct est joué pour signaler une correspondance.
+  - **Victoire** : Un son est joué lorsque le joueur gagne la partie.
+
+### Implémentation :
+Gestion des Effets Sonores
+Deux sons sont utilisés pour rendre le jeu plus immersif :
+
+- match_sound.mp3 : Joué lorsqu'une paire est trouvée.
+- win_sound.mp3 : Joué lors de la victoire.
+Ces sons sont intégrés via la classe SoundPool pour une lecture rapide et efficace.
+
+## Base de Données Locale
+Le stockage des victoires est géré avec SQLite via la classe DatabaseHelper :
+- Base de données : game.db
+- Table des victoires : Contient les colonnes id (clé primaire), date (date et heure), et flips (nombre de tentatives).
+**Fonctionnalités :**
+- Insérer une victoire : insertVictory(String date, int flips)
+- Récupérer toutes les victoires : getAllVictories()
 
 ## Présentation Finale
 L'interface principale est l'écran d'accueil de l'application. Elle offre deux options principales :
@@ -101,7 +126,6 @@ L'interface principale est l'écran d'accueil de l'application. Elle offre deux 
 2.	Consulter l'historique : Un bouton intitulé "View History" pour accéder à l'historique des victoires.
 
 <img src="https://github.com/user-attachments/assets/09717f14-cd6a-4625-bc1f-d0ee82511c7b" alt="image" width="200"/>
-
 
 Lorsque vous cliquez sur "Play", le jeu commence et vous devez associer les cartes. Un message de victoire s'affichera lorsque vous aurez trouvé toutes les correspondances.
 
